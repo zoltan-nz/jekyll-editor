@@ -1,0 +1,7 @@
+{
+  "name": "express-require",
+  "version": "0.1.0",
+  "devDependencies": {
+    "requirejs": "^2.2.0"
+  }
+}

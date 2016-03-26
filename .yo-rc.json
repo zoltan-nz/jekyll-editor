@@ -1,0 +1,16 @@
+{
+  "generator-express-requirejs": {
+    "templateModel": {
+      "project": {
+        "name": "express-require"
+      },
+      "environment": {
+        "isGitAvailable": true,
+        "isGruntAvailable": true,
+        "isGruntBumpAvailable": true,
+        "isJsHintAvailable": true,
+        "isMochaAvailable": true
+      }
+    }
+  }
+}

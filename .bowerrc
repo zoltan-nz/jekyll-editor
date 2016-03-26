@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower-requirejs -c src/client/requirejs-main.js -b ."
+  }
+}
