@@ -1,7 +1,15 @@
 
 require.config({
-  shim: {},
-  paths: {}
+  shim: {
+
+  },
+  paths: {
+    jquery: "bower_components/jquery/dist/jquery",
+    requirejs: "bower_components/requirejs/require"
+  },
+  packages: [
+
+  ]
 });
 
 require(['./js/app']);
