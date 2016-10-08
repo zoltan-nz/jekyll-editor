@@ -1,0 +1,31 @@
+{
+  "name": "backend-frontend-electron",
+  "version": "0.0.1",
+  "description": "Experiment with a combination of a node.js app, a frontend app and electron",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoltan-nz/backend-frontend-electron.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoltan-nz/backend-frontend-electron/issues"
+  },
+  "homepage": "https://github.com/zoltan-nz/backend-frontend-electron#readme",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb-base": "^8.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-json": "^2.0.2"
+  }
+}
