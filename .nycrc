@@ -1,0 +1,25 @@
+{
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "typings",
+    "@types",
+    "node_modules",
+    "coverage",
+    ".nyc_output",
+    "lib",
+    "test/**/*.ts"
+  ],
+  "extension": [
+    ".ts"
+  ],
+  "require": [
+    "ts-node/register"
+  ],
+  "reporter": [
+    "json",
+    "html"
+  ],
+  "all": true
+}
