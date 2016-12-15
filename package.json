@@ -18,7 +18,9 @@
     "prepublish": "npm test",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch",
-    "watch:launch": "nodemon lib/main"
+    "watch:launch": "nodemon lib/main",
+    "prestart": "npm build",
+    "start": "node lib/index"
   },
   "repository": {
     "type": "git",
