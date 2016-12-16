@@ -1,13 +1,13 @@
 {
-  "name": "backend-frontend-electron",
+  "name": "jekyll-editor",
   "version": "0.0.1",
-  "description": "Experiment with a combination of a node.js app, a frontend app and electron",
-  "main": "index.js",
+  "description": "Desktop application for managing static websites",
+  "main": "dist/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "clean": "rimraf lib .nyc-output coverage",
+    "clean": "rimraf dist .nyc-output coverage",
     "lint": "tslint --force --fix \"src/**/*.ts\" \"test/**/*.ts\"",
     "prebuild": "npm run lint",
     "build": "npm run clean && echo Using TypeScript && tsc --version && tsc --pretty",
@@ -18,41 +18,44 @@
     "prepublish": "npm test",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch",
-    "watch:launch": "nodemon lib/main",
+    "watch:launch": "nodemon  dist/index",
     "prestart": "npm build",
-    "start": "node lib/index"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zoltan-nz/backend-frontend-electron.git"
+    "start": "electron dist/index"
   },
   "author": "Zoltan",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zoltan-nz/backend-frontend-electron/issues"
-  },
-  "homepage": "https://github.com/zoltan-nz/backend-frontend-electron#readme",
   "dependencies": {
     "lodash": "^4.17.2"
   },
   "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/lodash": "^4.14.43",
-    "@types/mocha": "^2.2.33",
-    "@types/node": "^6.0.48",
-    "@types/sinon": "^1.16.31",
-    "@types/sinon-chai": "^2.7.27",
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.15",
-    "mocha": "^3.1.2",
-    "nodemon": "^1.11.0",
-    "nyc": "^10.0.0",
-    "rimraf": "^2.5.4",
-    "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0",
-    "stdio-mock": "^1.0.1",
-    "ts-node": "^1.7.2",
-    "tslint": "^4.0.2",
-    "typescript": "^2.1.4"
+    "@types/chai": "latest",
+    "@types/electron": "latest",
+    "@types/gulp": "latest",
+    "@types/gulp-newer": "latest",
+    "@types/gulp-sourcemaps": "latest",
+    "@types/gulp-typescript": "latest",
+    "@types/lodash": "latest",
+    "@types/merge2": "^0.3.29",
+    "@types/mocha": "latest",
+    "@types/node": "latest",
+    "@types/sinon": "latest",
+    "@types/sinon-chai": "latest",
+    "chai": "latest",
+    "coveralls": "latest",
+    "electron": "latest",
+    "gulp": "latest",
+    "gulp-newer": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-typescript": "latest",
+    "merge2": "^1.0.2",
+    "mocha": "latest",
+    "nodemon": "latest",
+    "nyc": "latest",
+    "rimraf": "latest",
+    "sinon": "latest",
+    "sinon-chai": "latest",
+    "ts-node": "latest",
+    "tslint": "latest",
+    "typescript": "latest"
   }
 }
