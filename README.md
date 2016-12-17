@@ -40,3 +40,21 @@ task('build', () => {
 
 [Spectron](https://github.com/electron/spectron)
 
+## Electron app frontend / backend
+
+webtorrent-desktop: React
+src/main
+src/rendrer
+
+kup: pug
+
+src/app/renderer
+src/app/  js
+
+Mancy: https://github.com/princejwesley/Mancy/tree/master/src
+React
+
+N1
+https://github.com/nylas/N1/blob/master/src/components/focus-container.jsx
+React
+

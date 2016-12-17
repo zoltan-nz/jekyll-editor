@@ -5,22 +5,22 @@ import { createProject } from 'gulp-typescript';
 import * as merge from 'merge2';
 import * as path from 'path';
 
-const srcPath = path.join('./src/**');
-const distPath = path.join('./dist');
+const SRC_PATH = path.join('./src/**');
+const DIST_PATH = path.join('./dist');
 
 let project = createProject('tsconfig.json');
 
 task('build', () => {
   const {js, dts} = project.src()
-    .pipe(newer(srcPath))
+    .pipe(newer(SRC_PATH))
     .pipe(sourcemaps.init())
     .pipe(project());
   return merge([
-    js.pipe(dest(distPath)),
-    dts.pipe(dest(distPath)),
+    js.pipe(dest(DIST_PATH)),
+    dts.pipe(dest(DIST_PATH)),
   ]);
 });
 
 task('watch', ['build'], () => {
-  watch(srcPath, ['build']);
+  watch(SRC_PATH, ['build']);
 });
