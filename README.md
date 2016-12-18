@@ -58,3 +58,7 @@ N1
 https://github.com/nylas/N1/blob/master/src/components/focus-container.jsx
 React
 
+## Build a basic frontend page with React
+
+* Using Typescript and React
+* Using Gulp for build tool
