@@ -4,26 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World 3!</title>
+
+  <script src="../node_modules/react/dist/react.js"></script>
+  <script src="../node_modules/react-dom/dist/react-dom.js"></script>
+
 </head>
-
 <body>
-  <h1>Hello World 3!</h1>
-  We are using node
-  <script>
-    document.write(process.versions.node)
+  <div id="root"></div>
 
-  </script>
-  , Chrome
   <script>
-    document.write(process.versions.chrome)
-
+    require('./renderer/home');
   </script>
-  , and Electron
-  <script>
-    document.write(process.versions.electron)
-
-  </script>
-  .
 </body>
 
 </html>

@@ -26,7 +26,9 @@
   "author": "Zoltan",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.2"
+    "lodash": "^4.17.2",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
     "@types/chai": "latest",
@@ -39,6 +41,8 @@
     "@types/merge2": "^0.3.29",
     "@types/mocha": "latest",
     "@types/node": "latest",
+    "@types/react": "^0.14.55",
+    "@types/react-dom": "^0.14.19",
     "@types/rimraf": "0.0.28",
     "@types/sinon": "latest",
     "@types/sinon-chai": "latest",
@@ -46,6 +50,7 @@
     "coveralls": "latest",
     "electron": "latest",
     "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-newer": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-typescript": "latest",

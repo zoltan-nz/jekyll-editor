@@ -4,9 +4,10 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "sourceMap": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "module": "commonjs",
-    "target": "ES6",
+    "target": "es6",
+    "jsx": "react",
     "moduleResolution": "node",
     "typeRoots": [
       "node_modules/@types",

@@ -25,6 +25,8 @@ $ touch Gulpfile.ts
 * gulp-sourcemaps
 * gulp-newer
 * merge2
+* gulp-run
+* gulp-livereload
 
 ```typescript
 task('build', () => {
@@ -60,5 +62,6 @@ React
 
 ## Build a basic frontend page with React
 
-* Using Typescript and React
-* Using Gulp for build tool
+-[ ] Using Typescript and React
+-[ ] Using Gulp for build tool
+-[ ] Livereload changes in Electron app
