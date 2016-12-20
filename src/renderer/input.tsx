@@ -1,16 +1,16 @@
 import * as React from 'react';
 
 export interface InputProps {
-  name: string;
+  handleChange(event: any): void;
 }
 
-export class Input extends React.Component<InputProps, InputProps> {
+export class Input extends React.Component<InputProps, undefined> {
 
-  private handleChange(event) {
-    this.setState({ name: event.target.value });
+  constructor(props: InputProps) {
+    super(props);
   }
 
   public render() {
-    return <input value={this.state.name} onChange={this.handleChange} />;
+    return <input onChange={e => this.props.handleChange(e)} />;
   }
 }

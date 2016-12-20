@@ -6,39 +6,41 @@ import * as merge from 'merge2';
 import * as path from 'path';
 import * as rimraf from 'rimraf';
 
-const SRC_PATH = path.join('./src/**');
-const DIST_PATH = path.join('./dist');
-const STATIC_FILES = path.join('./src/', 'index.html');
 
+const PATH = {
+  SRC: path.join('./src/**'),
+  DIST: path.join('./dist'),
+  STATIC: path.join('./src/', 'index.html'),
+};
 
 task('default', ['clean', 'static', 'typescript']);
 
 task('clean', () => {
-  rimraf.sync(DIST_PATH);
+  rimraf.sync(PATH.DIST);
 });
 
 task('typescript', () => {
   let project = createProject('tsconfig.json');
 
   const {js, dts} = project.src()
-    .pipe(newer(SRC_PATH))
+    .pipe(newer(PATH.SRC))
     .pipe(sourcemaps.init())
     .pipe(project());
   return merge([
-    js.pipe(dest(DIST_PATH)),
-    dts.pipe(dest(DIST_PATH)),
+    js.pipe(dest(PATH.DIST)),
+    dts.pipe(dest(PATH.DIST)),
   ]);
 });
 
 task('static', () => {
-  return src(STATIC_FILES)
-    .pipe(dest(DIST_PATH));
+  return src(PATH.STATIC)
+    .pipe(dest(PATH.DIST));
 });
 
 task('watch', ['clean', 'static', 'typescript'], () => {
-  watch(SRC_PATH, ['static', 'typescript']);
+  watch(PATH.SRC, ['static', 'typescript']);
 });
 
-task('copy', () => {
-  src('');
+task('electron', () => {
+  run('electron .').exec();
 });

@@ -27,6 +27,7 @@ $ touch Gulpfile.ts
 * merge2
 * gulp-run
 * gulp-livereload
+* gulp-util
 
 ```typescript
 task('build', () => {
@@ -65,3 +66,9 @@ React
 -[ ] Using Typescript and React
 -[ ] Using Gulp for build tool
 -[ ] Livereload changes in Electron app
+
+__Notes for React:__
+
+* `render` has to return only one main html element (like `<div>`)
+* `Component` has to interfaces, types, a `<Props, Status>`
+* Form change callbacks are `Event` types

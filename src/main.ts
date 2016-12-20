@@ -7,6 +7,7 @@ import { format } from 'url';
 let win: Electron.BrowserWindow;
 
 function createWindow(): void {
+
   // Create the browser window.
   win = new Electron.BrowserWindow({ width: 800, height: 600 });
 
@@ -22,11 +23,14 @@ function createWindow(): void {
 
   // Emitted when the window is closed.
   win.on('closed', () => {
+
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null;
   });
+
+  Electron.BrowserWindow.addDevToolsExtension('/Users/szines/Library/Application Support/Google/Chrome/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/0.15.4_0');
 }
 
 // This method will be called when Electron has finished
