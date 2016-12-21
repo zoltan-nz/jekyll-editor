@@ -1,14 +1,13 @@
 # Jekyll Editor
 
-The goal of this project is building a desktop app which helps to edit a static website or blog.
+The goal of this project is building an server/client app for managing jekyll. (Optional: wrap it in an Electron app)
 
-- [ ] Launch an empty electron app
-- [ ] Add a file explorer widget and open a folder
-- [ ] List the folder content
-- [ ] Clicking on a file open the content
-- [ ] Add text editor (probably monaco) to edit the file
-- [ ] Show the markdown preview of the content
-- [ ] Show the preview using Jekyll
+-[ ] Setup a server/client environment
+-[ ] Create an input field, read a folder path, pass back to server, server read the folder content, response it to client and client list the folder content for the user.
+-[ ] Clicking on a file open the content
+-[ ] Add text editor (probably monaco) to edit the file
+-[ ] Show the markdown preview of the content
+-[ ] Show the preview using Jekyll
 
 ## Adding Gulp to the project
 
@@ -39,28 +38,6 @@ task('build', () => {
 })
 ```
 
-## Testing electron app
-
-[Spectron](https://github.com/electron/spectron)
-
-## Electron app frontend / backend
-
-webtorrent-desktop: React
-src/main
-src/rendrer
-
-kup: pug
-
-src/app/renderer
-src/app/  js
-
-Mancy: https://github.com/princejwesley/Mancy/tree/master/src
-React
-
-N1
-https://github.com/nylas/N1/blob/master/src/components/focus-container.jsx
-React
-
 ## Build a basic frontend page with React
 
 -[ ] Using Typescript and React
@@ -72,3 +49,45 @@ __Notes for React:__
 * `render` has to return only one main html element (like `<div>`)
 * `Component` has to interfaces, types, a `<Props, Status>`
 * Form change callbacks are `Event` types
+
+## Dependencies
+
+Frontend dependencies
+- React
+- ReactDOM
+- Bootstrap style
+
+Frontend dev dependencies
+- Typescript
+- Gulp
+
+Backend dependencies
+- Express
+
+Backend development dependencies
+- TypeScrip
+- Gulp
+
+## Gulp tasks
+
+### TypeScript (backend, frontend)
+
+* Transpile TypeScript to ES6 JavaScript
+
+### SCSS (frontend)
+
+* Transpile SCSS to CSS
+
+### Clean (backend, frontend)
+
+* Clean up dist folder before a full new build
+
+### Watch (backend, frontend)
+
+* Transpile TypeScript and SCSS
+* Trigger Livereload when frontend file changed
+* Relaunch node server when backend file changed
+
+### Livereload (frontend)
+
+### Test related tasks

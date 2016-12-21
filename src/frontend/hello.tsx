@@ -5,7 +5,7 @@ export interface HelloState {
   name: string;
 }
 
-export class Hello extends React.Component<{}, HelloState> {
+export class Layout extends React.Component<{}, HelloState> {
 
   constructor(props) {
     super(props);

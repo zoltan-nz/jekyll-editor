@@ -7,31 +7,22 @@
     "test": "test"
   },
   "scripts": {
-    "clean": "echo Removing dist, .nyc-output and coverage... && rimraf dist .nyc-output coverage",
-    "lint": "echo Linting and autofixing src and test folder... && tslint --force --fix \"src/**/*.ts\" \"test/**/*.ts\"",
-    "static": "echo Creating dist folder and copy static files... && mkdir -p dist && cp ./src/index.html ./dist/index.html",
-    "prebuild": "npm run clean -s && npm run lint -s && npm run static -s",
-    "build": "echo Compiling Typescript with... && tsc --version && tsc --pretty",
+    "build": "gulp",
     "pretest": "npm run build",
-    "test": "mocha",
-    "testOnly": "mocha",
-    "test:coverage": "nyc npm run test && open coverage/index.html",
-    "prepublish": "npm test -s",
-    "watch": "npm run build -s -- --watch",
-    "watch:test": "npm run test -s -- --watch",
-    "prestart": "npm build",
-    "start": "electron dist/index"
+    "test": "mocha"
   },
   "author": "Zoltan",
   "license": "MIT",
   "dependencies": {
+    "express": "latest",
     "lodash": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "whatwg-fetch": "latest"
   },
   "devDependencies": {
     "@types/chai": "latest",
-    "@types/electron": "latest",
+    "@types/express": "latest",
     "@types/gulp": "latest",
     "@types/gulp-newer": "latest",
     "@types/gulp-sourcemaps": "latest",
@@ -45,9 +36,9 @@
     "@types/rimraf": "latest",
     "@types/sinon": "latest",
     "@types/sinon-chai": "latest",
+    "@types/whatwg-fetch": "latest",
     "chai": "latest",
     "coveralls": "latest",
-    "electron": "latest",
     "gulp": "latest",
     "gulp-livereload": "latest",
     "gulp-newer": "latest",
