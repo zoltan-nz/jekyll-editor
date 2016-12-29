@@ -36,7 +36,10 @@
     "@types/rimraf": "latest",
     "@types/sinon": "latest",
     "@types/sinon-chai": "latest",
+    "@types/webpack": "^2.1.0",
+    "@types/webpack-merge": "^0.0.4",
     "@types/whatwg-fetch": "latest",
+    "awesome-typescript-loader": "latest",
     "chai": "latest",
     "coveralls": "latest",
     "gulp": "latest",
@@ -52,8 +55,11 @@
     "rimraf": "latest",
     "sinon": "latest",
     "sinon-chai": "latest",
+    "source-map-loader": "latest",
     "ts-node": "latest",
     "tslint": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "webpack": "^2.2.0-rc.3",
+    "webpack-merge": "^2.0.0"
   }
 }

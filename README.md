@@ -91,3 +91,17 @@ Backend development dependencies
 ### Livereload (frontend)
 
 ### Test related tasks
+
+## React
+
+* https://github.com/petehunt/react-howto
+* https://github.com/mxstbr/react-boilerplate
+
+* https://github.com/gaearon/babel-plugin-react-transform
+* https://github.com/petehunt/webpack-howto
+* https://github.com/shelljs/shelljs
+* https://medium.com/@fay_jai/getting-started-with-reactjs-typescript-and-webpack-95dcaa0ed33c#.xvf8iry4s
+
+## Webpack
+
+* https://www.typescriptlang.org/docs/handbook/react-&-webpack.html

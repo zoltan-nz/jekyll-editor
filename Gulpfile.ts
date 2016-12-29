@@ -1,3 +1,4 @@
+import * as express from 'express';
 import { dest, src, task, watch } from 'gulp';
 import * as newer from 'gulp-newer';
 import * as sourcemaps from 'gulp-sourcemaps';
@@ -41,6 +42,18 @@ task('typescript', () => {
   ]);
 });
 
+task('static', () => {
+  src(`${PATH_FRONTEND.SRC}/*.html`)
+    .pipe(dest(PATH_FRONTEND.DIST));
+});
+
 task('watch', ['clean', 'typescript'], () => {
   watch(`${PATH_COMMON.SRC}/**`, ['typescript']);
+});
+
+task('watch-and-serve', ['watch'], () => {
+  const app = express();
+
+  app.use(express.static('dist', {index: 'index.html'}));
+  app.listen(8080);
 });
